@@ -19,12 +19,12 @@ func decode(message string) int {
 	current := 1
 	prev := 1
 	prev_prev := 1
-	var char rune
-	var prev_char rune
+	var char byte
+	var prev_char byte
 
 	for i := 1; i < len(message); i++ {
-		char = rune(message[i])
-		prev_char = rune(message[i-1])
+		char = message[i]
+		prev_char = message[i-1]
 		if char == '0' {
 			if prev_char == '0' || prev_char > '2' {
 				return 0
